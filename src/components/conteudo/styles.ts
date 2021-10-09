@@ -1,5 +1,15 @@
 import styled from "styled-components";
 
+export const AlbumLink=styled.a`
+font-size: 0.9rem;
+width: 100%;
+margin-top: 0.5rem;
+color: black;
+text-decoration: none;
+&:hover{
+    text-decoration: underline;
+}
+`
 export const Testando=styled.div`
     background: var(--color-light-grey-50);
     width: calc(100% - 251px);
@@ -65,7 +75,7 @@ display: flex;
 flex-basis: 10%;
 flex-direction: row;
 justify-content: space-between;
-align-items: flex-start;
+align-items: space-between;
 overflow-x: scroll;
 ::-webkit-scrollbar{
     display: none;
@@ -75,7 +85,7 @@ export const AlbumHandler=styled.div`
     display: flex;
     flex-direction: row;
     color: black;
-    flex: 0 0 20%;
+    flex: 0 0 25%;
     align-items: flex-start;
     padding: 0;
     .butaoPlay{
@@ -121,11 +131,12 @@ export const AlbumHandler=styled.div`
     }
 `
 
-export const ImgHandler=styled.li`
+export const ImgHandler=styled.div`
    width:100%;
    position: relative;
    list-style-type: none;
    margin-top: 4rem;
+   display: grid;
    `
 export const ImgCover=styled.img`
 height: auto;
@@ -141,4 +152,5 @@ transition: 0.25s;
 &:hover{
     filter: opacity(0.85);
 }
+
     `

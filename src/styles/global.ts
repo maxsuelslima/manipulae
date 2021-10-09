@@ -126,5 +126,31 @@ html{
 *:focus {
     outline: none;
 }
+.react-modal-overlay{
+    background-color: rgba(255,255,255,1);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+
+    width: calc(100% - 252px);
+    height:calc(100vh - 81px);
+    display: flex;
+    align-items:center;
+    justify-content: center;
+
+
+    ::-webkit-scrollbar{
+        display: none;
+    }
+}
+.react-moda-content{
+    width: calc(100% - 252px);
+    height:calc(100vh - 81px);
+
+    background: white;
+    padding:3rem;
+    position: relative;
+}
 
 `

@@ -6,11 +6,12 @@ background: var(--color-light-grey-50);
 position: fixed;
 left: 0;
 bottom: 0;
+color:black;
 width: calc(100% - 40px);
 outline: 1px solid var(--color-light-grey-300);
 padding-left:24px;
 display: flex;
-align-content: center;
+justify-content: space-between;
 `
 export const PlayerContainer=styled.ul`
 width: 128px;
@@ -53,4 +54,13 @@ export const ImgPlayer=styled.img`
     :hover{
         
     }
+`
+export const ListButton=styled.button`
+color: black;
+
+`
+export const BigContainer=styled.div`
+display: flex;
+justify-content: space-between;
+flex-direction: row;
 `
