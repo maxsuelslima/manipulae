@@ -1,34 +1,29 @@
 import { createStore } from "redux";
-import produce from 'immer';
-const INITIAL_STATE={
-    items:[]
+import produce from "immer";
+
+const INITIAL_STATE = {
+  items: [],
 };
 
-export function store(state=INITIAL_STATE, action){
-    return produce(state, draft=>{
-        
-    switch(action.type){
-        case 'ADD_MUSICA_LISTA':{
-            console.log(draft.items)
-            draft.items.push(action.payload)
-            break;
-            }
-            
-        case 'REMOVE_MUSICA_LISTA':{
-            draft.items.filter(item => item.id !== action.payload.id)
-            const x=draft.items.filter(item => item.id !== action.payload.id)
-            console.log(x)
-        }
-        default:{
+export function store(state = INITIAL_STATE, action) {
+  return produce(state, (draft) => {
+    switch (action.type) {
+      case "ADD_MUSICA_LISTA": {
+        console.log("add");
+        draft.items = [...state.items, action.payload];
+        break;
+      }
 
-            return state;
-
-        }
-
-}})}
-
-
-            
-
-
-
+      case "REMOVE_MUSICA_LISTA": {
+        console.log("remove");
+        draft.items = state.items.filter(
+          (item) => item.lista.id !== action.payload.lista.id
+        );
+        break;
+      }
+      default: {
+        return state;
+      }
+    }
+  });
+}

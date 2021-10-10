@@ -8,6 +8,7 @@ export const fetchData=async ()=>{
     const response =await axios.get(DeezerApi)
     console.log(response)
     return{
+        
         type:ActionTypes.FETCH_DATA,
         payload:response.data.data
     };
